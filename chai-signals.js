@@ -106,7 +106,6 @@
         });
 
         method('dispatchedWith', function(expectedParam){
-            console.info(arguments);
             var result, spy = getSpy(this._obj), args = [].slice.call(arguments);
             if (!(spy instanceof chai.signals.SignalSpy)) {
                 throw new Error('Expected a SignalSpy');
