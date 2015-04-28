@@ -160,7 +160,7 @@
         }
 
         function getSpy(actual) {
-            if (actual instanceof signals.Signal) {
+            if (typeof actual.dispatch == 'function') {
                 return spies.filter(function spiesForSignal(d) {
                     return d.signal === actual;
                 })[0];
@@ -173,7 +173,7 @@
 
         (function (namespace) {
             namespace.SignalSpy = function (signal, matcher) {
-                if (!(signal instanceof signals.Signal)) {
+                if (!(typeof signal.dispatch == 'function')) {
                     throw 'spyOnSignal requires a signal as a parameter';
                 }
                 this.signal = signal;
@@ -244,7 +244,7 @@
                 throw new Error('createSignalSpyObj requires a non-empty array of method names to create spies for');
             }
             methodNames.forEach(function(name) {
-                obj[name] = chai.signals.spyOnSignal(new signals.Signal());
+                obj[name] = chai.signals.spyOnSignal(name);
             });
             return obj;
         };

@@ -7,17 +7,13 @@ Adds the following assertions to chai:
 
 How to use
 --------------
-### Installation
-
-TODO
-
 ### Create
 First define which signals you're interested in.
 
 ```js
 var signal = new signals.Signal();
 var signalSpy = chai.signals.spyOnSignal(signal);
-var signalSpies = chai.signals.createSignalSpyObj(['method1', 'method2']);
+var signalSpies = chai.signals.createSignalSpyObj([signal1, signal2]);
 ```
 
 ### Filtering signals
@@ -77,16 +73,18 @@ require.config({
 Then use it in `Chai` tests like this:
 
 ```js
-define(['myClass', 'chai-signals'], function(myClass, spyOnSignal) {
+define(['myClass', 'chaiSignals'], function(myClass, chaiSignals) {
 	it('should signal completed', function () {
 		chai.signals.spyOnSignal(myClass.completed);
 
 		myClass.doSomething();
 
-		expect(myClass.completed).toHaveBeenDispatched();
+		expect(myClass.completed).to.have.been.dispatched();
 	});
 });
 ```
+
+If you are using karma to run tests make sure to include a `chai.use(chaiSignals);
 
 Examples
 --------

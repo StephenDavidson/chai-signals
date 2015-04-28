@@ -18,13 +18,13 @@ describe('chai-signals', function() {
 	it('should fail if signal to spy on not specified', function() {
 		expect(function() {
 			chai.signals.spyOnSignal();
-		}).to.throw('spyOnSignal requires a signal as a parameter');
+		}).to.throw('Cannot read property \'dispatch\' of undefined');
 	});
 
 	it('should fail if signal to spy on is null', function() {
 		expect(function() {
 			chai.signals.spyOnSignal(null);
-		}).to.throw('spyOnSignal requires a signal as a parameter');
+		}).to.throw('Cannot read property \'dispatch\' of null');
 	});
 
 	it('should subscribe to signal on spy', function() {
@@ -311,7 +311,7 @@ describe('chai-signals', function() {
             }).to.throw(error_msg);
         });
         it('should return an object of SignalSpies', function() {
-            var methodNames = ['test1', 'test2', 'test3'],
+            var methodNames = [signal, signal, signal],
                 spies = chai.signals.createSignalSpyObj(methodNames);
 
             methodNames.forEach(function(spy_name) {
