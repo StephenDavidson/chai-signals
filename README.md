@@ -84,7 +84,7 @@ define(['myClass', 'chaiSignals'], function(myClass, chaiSignals) {
 });
 ```
 
-If you are using karma to run tests make sure to include a `chai.use(chaiSignals);
+If you are using karma to run tests make sure to include `chai.use(chaiSignals);` in each of your test files.
 
 Examples
 --------
