@@ -1,0 +1,29 @@
+{
+  "name": "chai-signals",
+  "version": "1.0.0",
+  "homepage": "https://github.com/StephenDavidson/chai-signals",
+  "authors": [
+    "Stephen Davidson <shdavidson90@gmail.com>"
+  ],
+  "description": "Adds chai assertions for the js-signals library.",
+  "main": "./chai-signals.js",
+  "dependencies": {
+    "js-signals": "git://github.com/millermedeiros/js-signals.git"
+  },
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "chai",
+    "js-signals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

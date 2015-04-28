@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Chai Signals browser tests></title>
+
+    <link rel="stylesheet" href="node_modules/mocha/mocha.css" />
+
+    <script src="node_modules/mocha/mocha.js"></script>
+    <script src="node_modules/chai/chai.js"></script>
+    <script src="node_modules/chai-spies/chai-spies.js"></script>
+    <script src="bower_components/js-signals/dist/signals.js"></script>
+    <script src="chai-signals.js"></script>
+    <script>
+        window.global = window;
+        mocha.setup("bdd");
+    </script>
+    <script src="chai-signals.test.js"></script>
+</head>
+<body>
+<div id="mocha"></div>
+<script>
+    if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
+    else { mocha.run(); }
+</script>
+</body>
+</html>
