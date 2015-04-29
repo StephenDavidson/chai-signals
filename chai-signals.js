@@ -59,7 +59,6 @@
             assertion.assert(false, message, null, extra.expected, extra.actual);
         }
 
-
         /**
          * Returns true if the signal has been dispatched
          *
@@ -105,6 +104,22 @@
             );
         });
 
+        /**
+         * Returns true if the signal has been dispatched with argument
+         *
+         * Where x and y are objects or primitives:
+         *
+         * expect(signalSpy).to.have.been.dispatched(x);
+         * expect(signalSpy).to.have.been.dispatchedWith(x, y);
+         * expect(signal).to.have.been.dispatched(x);
+         * expect(signal).to.have.been.dispatchedWith(x, y);
+         *
+         * expect(signalSpy).to.not.have.been.dispatchedWith(x);
+         * expect(signalSpy).to.not.have.been.dispatchedWith(x, y);
+         * expect(signal).to.not.have.been.dispatchedWith(x);
+         * expect(signal).to.not.have.been.dispatchedWith(x, y);
+         *
+         */
         method('dispatchedWith', function(expectedParam){
             var result, spy = getSpy(this._obj), args = [].slice.call(arguments);
             if (!(spy instanceof chai.signals.SignalSpy)) {
@@ -159,7 +174,7 @@
         }
 
         function getSpy(actual) {
-            if (typeof actual.dispatch == 'function') {
+            if (!(actual === undefined) && !(actual === null) && (typeof actual.dispatch == 'function')) {
                 return spies.filter(function spiesForSignal(d) {
                     return d.signal === actual;
                 })[0];
@@ -172,7 +187,9 @@
 
         (function (namespace) {
             namespace.SignalSpy = function (signal, matcher) {
-                if (!(typeof signal.dispatch == 'function')) {
+                if ((signal === undefined) || (signal === null) || !(typeof signal.dispatch == 'function')) {
+                    console.info("hit");
+                    console.log(signal);
                     throw 'spyOnSignal requires a signal as a parameter';
                 }
                 this.signal = signal;

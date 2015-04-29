@@ -18,13 +18,13 @@ describe('chai-signals', function() {
 	it('should fail if signal to spy on not specified', function() {
 		expect(function() {
 			chai.signals.spyOnSignal();
-		}).to.throw('Cannot read property \'dispatch\' of undefined');
+		}).to.throw('spyOnSignal requires a signal as a parameter');
 	});
 
 	it('should fail if signal to spy on is null', function() {
 		expect(function() {
 			chai.signals.spyOnSignal(null);
-		}).to.throw('Cannot read property \'dispatch\' of null');
+		}).to.throw('spyOnSignal requires a signal as a parameter');
 	});
 
 	it('should subscribe to signal on spy', function() {

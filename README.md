@@ -105,3 +105,7 @@ npm test
 License
 -------
 This code is distributed under the MIT license.
+
+Credit
+-------
+This plugin is based off of Adam Nowotny's [jasmine-signals](https://github.com/AdamNowotny/jasmine-signals/blob/master/jasmine-signals.js)
