@@ -9,7 +9,7 @@ How to use
 --------------
 ### Installation
 
-Important: The expectations in this package are dependent on signals from [js-signals](https://github.com/millermedeiros/js-signals)
+Important: The expectations in this package are dependent on signals from [js-signals](https://github.com/millermedeiros/js-signals).
 
 ```
 npm install chai-signals
@@ -103,7 +103,7 @@ See tests for usage:
 
 Development
 -----------
-Install node.js, [bower](http://twitter.github.com/bower), get sources from git
+Install node.js, [bower](http://twitter.github.com/bower).
 
 ```js
 npm install
@@ -117,4 +117,4 @@ This code is distributed under the MIT license.
 
 Credit
 -------
-This plugin is based off of Adam Nowotny's [jasmine-signals](https://github.com/AdamNowotny/jasmine-signals/blob/master/jasmine-signals.js)
+This plugin is based off of Adam Nowotny's [jasmine-signals](https://github.com/AdamNowotny/jasmine-signals/blob/master/jasmine-signals.js).

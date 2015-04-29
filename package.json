@@ -1,6 +1,6 @@
 {
   "name": "chai-signals",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adds chai assertions for the js-signals library.",
   "main": "./chai-signals.js",
   "dependencies": {
