@@ -7,6 +7,15 @@ Adds the following assertions to chai:
 
 How to use
 --------------
+### Installation
+
+Important: The expectations in this package are dependent on signals from [js-signals](https://github.com/millermedeiros/js-signals)
+
+```
+npm install chai-signals
+```
+
+
 ### Create
 First define which signals you're interested in.
 
