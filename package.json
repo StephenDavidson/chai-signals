@@ -23,6 +23,9 @@
   },
   "keywords": [
     "chai",
+    "chai-plugin",
+    "browser",
+    "signals",
     "mocha",
     "js-signals"
   ],
