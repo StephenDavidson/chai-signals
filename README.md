@@ -1,4 +1,4 @@
-# chai-signals [![npm version](https://badge.fury.io/js/chai-signals.svg)](https://badge.fury.io/js/chai-signals)
+# chai-signals [![Build Status](https://travis-ci.org/StephenDavidson/chai-signals.svg?branch=master)](https://travis-ci.org/StephenDavidson/chai-signals) [![npm version](https://badge.fury.io/js/chai-signals.svg)](https://badge.fury.io/js/chai-signals)
 Adds [chai](https://github.com/chaijs/chai) assertions for the [js-signals](https://github.com/millermedeiros/js-signals) library.
 
 Adds the following assertions to chai:
